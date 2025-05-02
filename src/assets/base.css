@@ -59,7 +59,7 @@
 }
 
 body {
-  background: var(#F5F7FA);
+  background: var(#ffffff);
   transition:
     color 0.5s,
     background-color 0.5s;

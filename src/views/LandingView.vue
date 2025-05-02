@@ -15,7 +15,7 @@
     </section>
 
     <aside class="landing-aside">
-      <img src="src/assets/image/boteBasura.png" alt="IMAGEN DE BOTE DE BASURA">
+      <img src="/src/assets/Image/boteBasura.png" alt="IMAGEN DE BOTE DE BASURA">
     </aside>
   </main>
 
@@ -31,7 +31,7 @@
         <div class="card">
           <div class="card-icon">
             <div class="icon-container">
-              <img src="src/assets/Image/Ciudadanos.png" alt="Icono Ciudadanos">
+              <img src="/src/assets/Image/Ciudadanos.png" alt="Icono Ciudadanos">
             </div>
           </div>
           <div class="card-content">
@@ -43,7 +43,7 @@
         <div class="card">
           <div class="card-icon">
             <div class="icon-container">
-              <img src=" src/assets/Image/Gobiernos.png" alt="Icono Gobiernos">
+              <img src="/src/assets/Image/Gvb.png" alt="Icono Gobiernos">
             </div>
           </div>
           <div class="card-content">
@@ -55,7 +55,7 @@
         <div class="card">
           <div class="card-icon">
             <div class="icon-container">
-              <img src="src/assets/Image/Organizaciones.png" alt="Icono Organizaciones">
+              <img src="/src/assets/Image/Organizaciones.png" alt="Icono Organizaciones">
             </div>
           </div>
           <div class="card-content">
@@ -79,7 +79,7 @@
         <div class="stat-item">
           <div class="stat-icon">
             <div class="icon-box">
-              <img src="src/assets/Image/User.png" alt="Icono Usuarios">
+              <img src="/src/assets/Image/User.png" alt="Icono Usuarios">
             </div>
           </div>
           <div class="stat-info">
@@ -91,7 +91,7 @@
         <div class="stat-item">
           <div class="stat-icon">
             <div class="icon-box">
-              <img src="src/assets/image/Gvb.png" alt="Icono Gobiernos">
+              <img src="/src/assets/image/Gvb.png" alt="Icono Gobiernos">
             </div>
           </div>
           <div class="stat-info">
@@ -103,7 +103,7 @@
         <div class="stat-item">
           <div class="stat-icon">
             <div class="icon-box">
-              <img src="src/assets/image/Recursos.png" alt="Icono Recursos">
+              <img src="/src/assets/image/Recursos.png" alt="Icono Recursos">
             </div>
           </div>
           <div class="stat-info">
@@ -115,7 +115,7 @@
         <div class="stat-item">
           <div class="stat-icon">
             <div class="icon-box">
-              <img src="src/assets/image/Card.png" alt="Icono Empresas">
+              <img src="/src/assets/image/Card.png" alt="Icono Empresas">
             </div>
           </div>
           <div class="stat-info">
@@ -130,7 +130,7 @@
   <!-- Información -->
   <section class="info-section">
     <div class="info-container">
-      <img class="info-image" src="src/assets/image/reciclar.png" alt="Imagen de Estado Limpio">
+      <img class="info-image" src="/src/assets/image/reciclar.png" alt="Imagen de Estado Limpio">
       <div class="info-text">
         <h2 class="info-title">Estado Limpio</h2>
         <p class="info-description">
@@ -140,267 +140,640 @@
       </div>
     </div>
   </section>
-
-  <footer  class="footer-container">
-    <div class="footer-grid">
-      <div class="footer-column">
-        <img   class="brand-logo" src="/src/assets/Image/EstadoLimpioLogo.png" alt="Logo Estado Limpio">
-        <div class="footer-description">
-          <p class="copyright">Copyright © 2025 Estado Limpio.</p>
-          <p class="rights">Todos los derechos reservados</p>
-        </div>
-      </div>
-
-      <div class="footer-column">
-        <h3 class="footer-link-title">Compañía</h3>
-        <ul>
-          <li><RouterLink to="/about" class="footer-link">About us</RouterLink></li>
-          <li><RouterLink to="/about" class="footer-link">Blog</RouterLink></li>
-          <li><RouterLink to="/about" class="footer-link">Contact us</RouterLink></li>
-          <li><RouterLink to="/about" class="footer-link">Pricing</RouterLink></li>
-          <li><RouterLink to="/about" class="footer-link">Testimonials</RouterLink></li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h3 class="footer-link-title">Contacto</h3>
-        <ul>
-          <li><RouterLink to="/about" class="footer-link">Help center</RouterLink></li>
-          <li><RouterLink to="/about" class="footer-link">Terms of service</RouterLink></li>
-          <li><RouterLink to="/about" class="footer-link">Legal</RouterLink></li>
-          <li><RouterLink to="/about" class="footer-link">Privacy policy</RouterLink></li>
-          <li><RouterLink to="/about" class="footer-link">Status</RouterLink></li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h3 class="footer-link-title">Manténgase informado</h3>
-        <div class="subscribe-box">
-          <input type="email" placeholder="Introduce tu Correo" />
-          <button >Suscripccion</button>
-          <div class="circle">
-            <a href="https://www.instagram.com/estadolimpio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-              <img src="/src/assets/Image/Social-Instagram.png"  alt="Instagram" class="circle-image" />
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </footer>
 </template>
 
+<style scoped>
+/* Section Container */
+.section-container {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 78px;
+    width: 100%;
+    height: 100%;
+    padding-left: 144px;
+    padding-right: 144px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: #F5F7FA;
+  }
+
+  /* Section Image */
+  .section-image {
+    width: 203px;
+    height: 212px;
+  }
+
+  /* Text Container */
+  .text-container {
+    flex: 1 1 0;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  /* Title Container */
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+  }
+
+  /* Title */
+  .title {
+    color: #34A853;
+    font-size: 40px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 700;
+    line-height: 24px;
+    word-wrap: break-word;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Description Container */
+  .description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+
+  /* Description */
+  .description {
+    color: #484C52;
+    font-size: 20px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 500;
+    line-height: 28px;
+    word-wrap: break-word;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Creator Text */
+  .creator {
+    color: #89939E;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    text-align: center;
+    width: 100%;
+  }
+
+  .info-section {
+    display: flex;
+    justify-content: center; /* Centra la sección horizontalmente */
+    padding: 32px 0; /* Espaciado superior e inferior */
+    background-color: #ffffff; /* Opcional: color de fondo */
+  }
+
+  .info-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas si es necesario */
+    align-items: center;
+    gap: 20px; /* Espaciado entre la imagen y el texto */
+    max-width: 1200px; /* Ancho máximo para alinear con otras secciones */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interno */
+  }
+
+  .info-image {
+    max-width: 150px; /* Reduce el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+  }
+
+  .info-text {
+    flex: 1; /* Permite que el texto ocupe el espacio restante */
+  }
+
+  .info-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .info-description,
+  .info-creator {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-style: bold;
+    color: #000000;
+  }
+
+  .info-creator {
+    font-weight: bold; /* Asegura que el texto se muestre en negritas */
+  }
+
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .info-container {
+      flex-direction: column; /* Cambia a diseño vertical en pantallas pequeñas */
+      text-align: center; /* Centra el texto */
+    }
+
+    .info-image {
+      max-width: 120px; /* Reduce aún más el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    .info-title {
+      font-size: 1.5rem; /* Ajusta el tamaño del título */
+    }
+
+    .info-description,
+    .info-creator {
+      font-size: 0.9rem; /* Reduce el tamaño del texto */
+    }
+  }
+</style>
 
 <style scoped>
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
 
-.footer-container {
-  width: 100%;
-  background: #263238;
-  color: #F5F7FA;
-  padding: 64px 20px;
-  box-sizing: border-box;
-}
+  /* Text Content */
+  .text-content {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 
-/* Footer Grid */
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Cuadrícula de 4 columnas */
-  gap: 40px; /* Espaciado entre columnas */
-  max-width: 1200px; /* Limitar el ancho máximo */
-  margin: 0 auto; /* Centrar la cuadrícula */
-}
+  .main-heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
 
-/* Footer Column */
-.footer-column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Alinear todos los textos al inicio */
-  gap: 16px; /* Espaciado uniforme entre elementos */
-}
+  .highlight {
+    color: #4caf50;
+  }
 
-/* Primera columna: Logo y derechos reservados */
-.footer-column:first-child {
-  margin-right: 40px; /* Separar la primera columna del resto */
-}
+  .subheading {
+    font-size: 18px;
+    color: #666;
+  }
 
-/* Footer Content */
-.footer-content {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 64px 165px;
-  background-color: #263238;
-  gap: 125px;
-}
+  /* Stats Section */
+  .stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+  }
 
-/* Brand Section */
-.brand-container {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 40px;
-}
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta el número de columnas automáticamente */
+    gap: 20px; /* Espaciado entre los elementos */
+    margin: 20px 0;
+  }
 
-.brand-title {
-  color: #34A853;
-  font-size: 32px;
-  font-family: 'SF Pro Display', sans-serif;
-  font-weight: 700;
-  word-wrap: break-word;
-}
-
-.brand-title:last-child {
-  color: black;
-}
-
-/* Logo */
-.brand-logo {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  display: block;
-  margin-top: 15px; /* Agregar margen superior para bajar el logo */
-  margin-bottom: 10px; /* Mantener separación con el texto */
-}
-
-/* Footer Description */
-.footer-description {
-  font-size: 14px;
-  line-height: 20px;
-  text-align: left; /* Asegurar que el texto esté alineado a la izquierda */
-}
-
-.footer-description .copyright,
-.footer-description .rights {
-  color: #F5F7FA;
-  font-size: 14px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  line-height: 20px;
-  word-wrap: break-word;
-}
-
-/* Footer Links */
-.footer-links {
-  display: inline-flex;
-  gap: 30px;
-}
-
-.footer-link-column {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-/* Footer Link Titles */
-.footer-link-title {
-  color: white;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 8px; /* Separar el título de los enlaces */
-}
-
-.footer-link {
-  color: #F5F7FA;
-  font-size: 14px;
-  text-decoration: none;
-  line-height: 20px;
-}
-
-.footer-link:hover {
-  text-decoration: underline;
-}
-
-/* Subscription Box */
-.subscribe-box {
-  display: flex;
-  flex-direction: column;
-  gap: 8px; /* Espaciado entre el input y el botón */
-}
-
-/* Subscription Box Input */
-.subscribe-box input {
-  width: 100%;
-  max-width: 400px; /* Hacer la entrada más larga */
-  height: 32px; /* Hacer la entrada más delgada */
-  border-radius: 6px; /* Ajustar el borde redondeado */
-  border: 1px solid #D9DBE1; /* Agregar un borde para mejor visibilidad */
-  padding: 6px 10px; /* Ajustar el relleno interno */
-  font-size: 14px; /* Tamaño de texto */
-  box-sizing: border-box; /* Incluir padding y borde en el tamaño total */
-}
-
-.subscribe-box button {
-  padding: 8px 16px;
-  background: #34A853;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* Email Label */
-.email-label {
-  color: #D9DBE1;
-  font-size: 14px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  line-height: 10px;
-  word-wrap: break-word;
-}
-
-.circle {
-  position: relative; /* Necesario para posicionar hijos con posición absoluta */
-  width: 35px;
-  height: 35px;
-  background-color: #484C52;
-  border-radius: 50%; /* Hace que el div sea un círculo */
-  margin-top: 10px; /* Espaciado entre el botón y el círculo */
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Centrar contenido dentro del círculo */
-  overflow: hidden; /* Asegurar que el contenido no sobresalga */
-}
-
-.circle a {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%; /* Asegurar que el enlace también sea circular */
-  overflow: hidden; /* Ocultar cualquier contenido que sobresalga */
-}
-
-.circle img.circle-image {
-  position: absolute; /* Posicionar la imagen de forma absoluta */
-  top: 50%; /* Mover al 50% desde la parte superior */
-  left: 50%; /* Mover al 50% desde la izquierda */
-  transform: translate(-50%, -50%); /* Centrar la imagen exactamente en el medio */
-  width: 70%; /* Ajustar el tamaño de la imagen dentro del círculo */
-  height: 70%; /* Ajustar el tamaño de la imagen dentro del círculo */
-  object-fit: cover; /* Asegura que la imagen se ajuste al círculo sin deformarse */
-  border-radius: 50%; /* Mantiene la forma circular de la imagen */
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr; /* Cambiar a 2 columnas en pantallas pequeñas */
+  .stats-row {
+    display: flex;
+    justify-content: center;
     gap: 20px;
   }
 
-  .footer-column {
-    align-items: center; /* Centrar columnas en pantallas pequeñas */
+  .stat-card {
+    background: #FFFFFF;
+    border: 2px solid #F4EDED;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide el contenedor en dos columnas */
+    gap: 40px; /* Espaciado entre las columnas */
+    align-items: center; /* Alinea verticalmente el contenido */
+    padding: 64px 16px;
+    background: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .stats-text {
+    grid-column: 1; /* Coloca el texto en la primera columna */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .stats-heading {
+    font-size: 36px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 700;
+    line-height: 44px;
+    color: #34A853;
+  }
+
+  .stats-heading span:last-child {
+    color: #4D4D4D;
+  }
+
+  .stats-subheading {
+    font-size: 16px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    color: #18191F;
+  }
+
+  .stats-cards {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+    gap: 30px; /* Espaciado entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    width: 100%;
+  }
+
+  .stat-item {
+    background-color: #ffffff; /* Fondo claro */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    transition: transform 0.3s ease;
+  }
+
+  .stat-item:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+  }
+
+  .stat-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stats-grid .stat-item .stat-icon img {
+    width: 50px; /* Ajusta el tamaño según lo que necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+
+  .stat-icon .icon-box img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .stat-item:nth-child(2) {
+    order: 4; /* Mover "Gobiernos" al último lugar */
+  }
+
+  .stat-item:nth-child(4) {
+    order: 2; /* Mover "Empresas" al segundo lugar */
+  }
+
+  @media (max-width: 768px) {
+    .stats-container {
+      grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+      padding: 32px 16px; /* Reduce el espaciado interno */
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr; /* Las tarjetas ocupan todo el ancho */
+    }
+
+    .stat-item {
+      flex: 1 1 calc(50% - 20px); /* Cambiar a dos columnas en tablets */
+      max-width: 100%; /* Asegura que las tarjetas ocupen todo el ancho disponible */
+      padding: 15px;
+    }
+
+    .stat-value {
+      font-size: 1.2rem;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stat-item {
+      flex: 1 1 100%; /* Cambiar a una columna en móviles */
+    }
+  }
+
+  /* Estilo para el texto "Una nueva era en la recolección de residuos" */
+  .stats-text .highlight {
+    color: #34A853;
+    font-size: 36px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 700;
+    line-height: 44px;
+    word-wrap: break-word;
+  }
+
+  /* Estilo para el texto "por y para nuestra gente." */
+  .stats-text span:last-child {
+    color: #4D4D4D;
+    font-size: 36px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 700;
+    line-height: 44px;
+    word-wrap: break-word;
+  }
+
+  /* Estilo para "Estamos aquí para mitigar el problema más importante" */
+  .stats-subheading {
+    font-size: 16px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    color: #18191F;
+  }
+
+  /* Estilo para "por y para nuestra gente." */
+  .stats-text .secondary-text {
+    color: #4D4D4D;
+    font-size: 36px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 700;
+    line-height: 44px;
+    word-wrap: break-word;
+  }
+</style>
+
+<style scoped>
+/* Reglas generales para sinergia */
+.sinergia-section {
+    width: 100%; /* Cambiar de ancho fijo a ancho completo */
+    max-width: 1200px; /* Limitar el ancho máximo */
+    padding: 48px 16px; /* Reducir el padding para pantallas pequeñas */
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin: 0 auto;
+    /* Centra la sección horizontalmente */
+  }
+
+  .sinergia-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
     text-align: center;
   }
+
+  .sinergia-header h2 {
+    color: #4D4D4D;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+
+  .sinergia-header p {
+    color: #717171;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .sinergia-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre las tarjetas */
+  }
+
+  .sinergia-cards .card:nth-child(2) {
+    order: 3; /* Mover la tarjeta "Gobiernos" al tercer lugar */
+  }
+
+  .sinergia-cards .card:nth-child(3) {
+    order: 2; /* Mover la tarjeta "Organizaciones privadas" al segundo lugar */
+  }
+
+  .card {
+    flex: 1 1 calc(33.33% - 20px); /* Cada tarjeta ocupa un tercio del ancho */
+    min-width: 250px; /* Asegurar un ancho mínimo */
+    padding: 24px 16px; /* Reducir el padding interno */
+    background: white;
+    box-shadow: 0px 2px 4px rgba(171, 190, 209, 0.2);
+    border: 2px solid #F4EDED;
+    /* Borde de color #F4EDED */
+    border-radius: 18px;
+    /* Bordes redondeados */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .card-content h3 {
+    margin-bottom: 5px;
+    /* Reduce el espacio debajo del título */
+    margin-top: 0;
+    /* Elimina cualquier margen superior del título */
+  }
+
+  .card h3 {
+    color: #4D4D4D;
+    font-size: 24px; /* Ajustar el tamaño del texto */
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  .card p {
+    margin-top: 0;
+    /* Elimina el margen superior del texto */
+    color: #717171;
+    font-size: 14px; /* Reducir el tamaño del texto */
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    /* Reduce el espacio entre el ícono y el título */
+  }
+
+  .icon-container {
+    width: 60px; /* Ajustar el tamaño del ícono */
+    height: 60px;
+    background-color: #E8F5E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    /* Ajusta el radio si es necesario */
+  }
+
+  .icon-container img {
+    max-width: 80%;
+    /* Aumenta el tamaño del ícono dentro del cuadrado */
+    max-height: 80%;
+    /* Aumenta el tamaño del ícono dentro del cuadrado */
+  }
+
+  .sinergia-container {
+    background-color: #FFFFFF;
+    /* Fondo blanco */
+    padding: 32px;
+    /* Espaciado interno */
+  }
+
+  @media (max-width: 768px) {
+    main.landing {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .landing-aside {
+      text-align: center;
+    }
+
+    .sinergia-section {
+      padding: 24px 16px; /* Reducir el padding para pantallas pequeñas */
+    }
+
+    .card {
+      flex: 1 1 calc(50% - 20px); /* Cambiar a dos columnas en tablets */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card {
+      flex: 1 1 100%; /* Cambiar a una columna en móviles */
+    }
+
+    .card h3 {
+      font-size: 20px; /* Reducir el tamaño del texto en móviles */
+      line-height: 28px;
+    }
+
+    .card p {
+      font-size: 12px; /* Reducir el tamaño del texto en móviles */
+      line-height: 18px;
+    }
+
+    .icon-container {
+      width: 50px; /* Reducir el tamaño del ícono en móviles */
+      height: 50px;
+    }
+  }
+</style>
+
+<style scoped>
+body {
+  margin: 10%;
+  font-family: 'SF Pro Display', sans-serif;
+  background-color: #F5F7FA;
 }
 
-.footer-column {
+main.landing {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5% 10%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.landing-content {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
+  gap: 20px;
+  flex: 2;
+  min-width: 300px;
 }
 
+.landing-title {
+  padding: 1%;
+  color: #34A853;
+  font-size: 3.5vw;
+  font-weight: bold;
+  text-align: left; /* Alinea el texto a la izquierda */
+  line-height: 60px;
+  max-width: 670px;
+  margin: 0; /* Elimina el centrado horizontal */
+}
+
+.landing-description {
+  padding: 1% 0; /* Reduce el padding lateral */
+  font-size: 1.5vw;
+  text-align: left; /* Alinea el texto a la izquierda */
+  line-height: 27px;
+  max-width: 488px;
+  margin: 0; /* Elimina el centrado horizontal */
+}
+
+.landing-aside {
+  flex: 1;
+  min-width: 200px;
+  text-align: right;
+}
+
+.landing-aside img {
+  max-width: 100%; /* Imagen se adapta al ancho disponible */
+  height: auto;
+}
+
+/* Mejoras para el tamaño en dispositivos más pequeños */
+@media (max-width: 768px) {
+  main.landing {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .landing-title {
+    font-size: 5vw;  /* Ajusta el tamaño de fuente para pantallas pequeñas */
+  }
+
+  .landing-description {
+    font-size: 3vw;  /* Ajusta el tamaño de fuente para pantallas pequeñas */
+    padding: 5%;
+  }
+.landing-aside.img {
+    max-width: 100%;
+    height: auto;
+  }
+  .landing-aside {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
 </style>
+
