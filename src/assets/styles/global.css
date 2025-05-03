@@ -1,0 +1,73 @@
+/* Variables de colores para textos */
+:root {
+  --text-color: #000000;
+  --text-light-color: #FFFFFF;
+  --heading-color: #1b1b1b;
+  --background-color: #F5F7FA;
+  --primary-color: #34A853;
+}
+
+/* Tipografía general */
+body {
+  font-family: 'SF Pro Display', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: bold; /* Los títulos tienen bold */
+  color: var(--heading-color);
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+  font-weight: normal; /* Los textos normales tienen regular */
+  color: var(--text-light-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Clases utilitarias para texto */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-light {
+  font-weight: 300;
+  color: #2F2F2F; /* Define el color globalmente */
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-small {
+  font-size: 0.875rem;
+}
+
+.text-large {
+  font-size: 1.25rem;
+}

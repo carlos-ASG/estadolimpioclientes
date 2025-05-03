@@ -19,10 +19,8 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
-}
 
-/* semantic color variables for this project */
-:root {
+  /* semantic color variables */
   --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
@@ -59,11 +57,9 @@
 }
 
 body {
-  background: var(#ffffff);
-  transition:
-    color 0.5s,
-    background-color 0.5s;
-  font-family:-apple-system;
+  background: var(--color-background); /* Corregido el uso de la variable */
+  transition: color 0.5s, background-color 0.5s;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

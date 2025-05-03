@@ -1,4 +1,6 @@
 import './assets/main.css'
+import './assets/styles/global.css'; // Importa los estilos globales
+
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
