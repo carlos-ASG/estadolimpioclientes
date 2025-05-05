@@ -1,17 +1,19 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router';
+import { RouterView, useRoute } from 'vue-router';
 import NavbarComponent from '@/components/NavbarComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
+
+const route = useRoute();
 </script>
 
 <template>
   <!-- Navbar -->
-  <NavbarComponent />
+  <NavbarComponent v-if="!route.meta.hideNavbar" />
 
   <RouterView />
 
   <!-- Footer -->
-  <FooterComponent />
+  <FooterComponent v-if="!route.meta.hideFooter" />
 </template>
 
 

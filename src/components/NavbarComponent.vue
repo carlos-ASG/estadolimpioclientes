@@ -13,7 +13,7 @@ import { RouterLink } from 'vue-router';
           <li><RouterLink to="/contacto">Contacto</RouterLink></li>
         </ul>
         <ul class="auth-links">
-          <li><RouterLink to="/inicioSe" class="highlighted">Iniciar Sesión</RouterLink></li>
+          <li><RouterLink to="/dashboard" class="highlighted">Iniciar Sesión</RouterLink></li>
           <li><RouterLink to="/registro" class="btn-green">Regístrate</RouterLink></li>
         </ul>
       </nav>
