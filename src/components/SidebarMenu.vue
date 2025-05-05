@@ -17,17 +17,25 @@
   </template>
   
   <script setup lang="ts">
-  const menuItems = [
-    { icon: "https://placehold.co/39x40", alt: "Unidades", text: "Unidades" },
-    { icon: "https://placehold.co/41x35", alt: "Zonas", text: "Zonas" },
-    { icon: "https://placehold.co/52x50", alt: "Personal", text: "Personal" },
-    { icon: "https://placehold.co/44x41", alt: "Pedidos Esp", text: "Pedidos Esp" },
-    { icon: "https://placehold.co/51x51", alt: "Solicitar Esp", text: "Solicitar Esp" },
-    { icon: "https://placehold.co/38x46", alt: "Alertas", text: "Alertas" },
-    { icon: "https://placehold.co/51x51", alt: "Mapa", text: "Mapa" },
-    { icon: "https://placehold.co/51x51", alt: "Cerrar Sesión", text: "Cerrar Sesión" },
-  ];
-  </script>
+// Importa las imágenes
+import unidadesIcon from '@/assets/Image/unidades.svg';
+import alertaIcon from '@/assets/Image/alerta.svg';
+import mapaIcon from '@/assets/Image/mapa.svg';
+import personalIcon from '@/assets/Image/personal.svg';
+import solicitarEspIcon from '@/assets/Image/solicitar_esp.svg';
+import zonasIcon from '@/assets/Image/zonas.svg';
+
+const menuItems = [
+  { icon: unidadesIcon, alt: "Unidades", text: "Unidades" },
+  { icon: zonasIcon, alt: "Zonas", text: "Zonas" },
+  { icon: personalIcon, alt: "Personal", text: "Personal" },
+  { icon: "https://placehold.co/44x41", alt: "Pedidos Esp", text: "Pedidos Esp" },
+  { icon: solicitarEspIcon, alt: "Solicitar Esp", text: "Solicitar Esp" },
+  { icon: alertaIcon, alt: "Alertas", text: "Alertas" },
+  { icon: mapaIcon, alt: "Mapa", text: "Mapa" },
+  { icon: "https://placehold.co/51x51", alt: "Cerrar Sesión", text: "Cerrar Sesión" },
+];
+</script>
   
   <style scoped>
   .sidebar {
@@ -89,6 +97,13 @@
     justify-content: center;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+
+  .menu-icon:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.35); /* Sombra más pronunciada */
+    background-color: #f0f0f0; /* Cambia el fondo a un gris claro */
   }
   
   .menu-icon img {
