@@ -17,7 +17,8 @@ const router = createRouter({
     {
       path: '/dashboard',
       name: 'dashboard',
-      component: () => import('../views/DashboardView.vue'),
+      // @ts-ignore
+        component: () => import('../views/DashboardView.vue'),
       meta: { hideNavbar: true, hideFooter: true }, // Meta para ocultar el Footer
     },
   ],
