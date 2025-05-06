@@ -11,11 +11,11 @@ import { onMounted, defineProps } from 'vue';
 defineProps({
   width: {
     type: String,
-    default: '800px', // Valor por defecto
+    default: '700px', // Valor por defecto
   },
   height: {
     type: String,
-    default: '500px', // Valor por defecto
+    default: '400px', // Valor por defecto
   },
 });
 
@@ -63,9 +63,12 @@ onMounted(() => {
 .map-card {
   background-color: #f7f7f7;
   border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.35);
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  outline: 1px solid rgba(0, 0, 0, 0.35);
+  outline-offset: -1px;
+  
+  
 }
 
 .google-map {

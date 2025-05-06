@@ -27,9 +27,10 @@
 
       <!-- Contenedor de MapCard y StatsCard -->
       <div class="cards-container">
-        <MapCard />
-        <StatsCard /> <!-- Agrega el componente StatsCard aquí -->
-      </div>
+  <MapCard class="card" />
+  <StatsCard class="card" />
+  
+</div>
     </div>
   </div>
 </template>
@@ -104,9 +105,9 @@ const cards = ref([
   display: flex;
   gap: 20px;
   padding: 10px;
-  justify-content: flex-start; /* Asegura que las tarjetas estén alineadas a la izquierda */
-  align-items: flex-start; /* Asegura que las tarjetas estén alineadas en la parte superior */
-  overflow: visible; /* Elimina el scroll horizontal */
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: visible;
 }
 
 /* Área arrastrable */
@@ -126,7 +127,22 @@ const cards = ref([
 .cards-container {
   display: flex;
   gap: 20px;
-  flex-wrap: nowrap; /* Asegura que los elementos estén en una fila */
-  align-items: flex-start; /* Alinea los elementos en la parte superior */
+  justify-content: space-between; /* Asegura que las tarjetas estén separadas */
+  align-items: flex-start;
+  min-width: 20px;
+  width: 100%; /* Asegura que el contenedor no exceda el ancho de la página */
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten si no hay suficiente espacio */
+}
+
+.card {
+  flex: 1 1 48%; /* Cada tarjeta ocupa el 48% del ancho disponible */
+  max-width: 48%; /* Limita el ancho máximo de cada tarjeta */
+  height: 400px; /* Altura fija para ambas tarjetas */
+  background: #f7f7f7;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+  
 }
 </style>
