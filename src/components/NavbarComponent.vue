@@ -1,5 +1,19 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router';
+import { ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
+
+// Estado para rastrear la ruta activa
+const activeRoute = ref('');
+const route = useRoute();
+
+// Actualiza el estado cuando cambia la ruta
+watch(
+  () => route.path,
+  (newPath) => {
+    activeRoute.value = newPath;
+  },
+  { immediate: true }
+);
 </script>
 
 <template>
@@ -7,14 +21,56 @@ import { RouterLink } from 'vue-router';
     <div class="wrapper">
       <nav class="navbar">
         <ul class="nav-links">
-          <li><RouterLink to="/">Inicio</RouterLink></li>
-          <li><RouterLink to="/acerca-de">Acerca de</RouterLink></li>
-          <li><RouterLink to="/precios">Precios</RouterLink></li>
-          <li><RouterLink to="/contacto">Contacto</RouterLink></li>
+          <li>
+            <RouterLink
+              to="/"
+              :class="{ active: activeRoute === '/' }"
+            >
+              Inicio
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink
+              to="/acerca-de"
+              :class="{ active: activeRoute === '/acerca-de' }"
+            >
+              Acerca de
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink
+              to="/precios"
+              :class="{ active: activeRoute === '/precios' }"
+            >
+              Precios
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink
+              to="/contacto"
+              :class="{ active: activeRoute === '/contacto' }"
+            >
+              Contacto
+            </RouterLink>
+          </li>
         </ul>
         <ul class="auth-links">
-          <li><RouterLink to="/InicioSesion" class="highlighted">Iniciar Sesión</RouterLink></li>
-          <li><RouterLink to="/registro" class="btn-green">Regístrate</RouterLink></li>
+          <li>
+            <RouterLink
+              to="/InicioSesion"
+              :class="{ 'btn-green': activeRoute === '/InicioSesion', 'bouncy': activeRoute === '/InicioSesion' }"
+            >
+              Iniciar Sesión
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink
+              to="/registro"
+              :class="{ 'btn-green': activeRoute === '/registro', 'bouncy': activeRoute === '/registro' }"
+            >
+              Regístrate
+            </RouterLink>
+          </li>
         </ul>
       </nav>
     </div>
@@ -50,31 +106,49 @@ import { RouterLink } from 'vue-router';
   color: #333;
   font-size: 16px;
   font-weight: 500;
-  transition: color 0.3s ease, transform 0.3s ease; /* Animación suave */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links li a:hover,
 .auth-links li a:hover {
-  color: #34A853; /* Cambia el color al pasar el mouse */
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  color: #34A853;
+  transform: scale(1.05);
 }
 
-.auth-links .highlighted {
+/* Estilo para la ruta activa */
+.nav-links li a.active,
+.auth-links li a.active {
   color: #34A853;
   font-weight: bold;
+  transform: scale(1.1);
 }
 
+/* Estilo específico para "Iniciar Sesión" */
 .auth-links .btn-green {
   background-color: #34A853;
   color: white;
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Animación suave */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .auth-links .btn-green:hover {
-  background-color: #2c8c47; /* Cambia el color de fondo al pasar el mouse */
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  background-color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Animación bouncy */
+@keyframes bouncy {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.auth-links .bouncy {
+  animation: bouncy 0.5s ease-in-out;
 }
 </style>
