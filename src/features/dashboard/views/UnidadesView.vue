@@ -1,31 +1,32 @@
 <script setup lang="ts">
 const headers = [
-  { text: "Responsable", value: "responsable" },
-  { text: "Ruta", value: "ruta" },
-  { text: "ID", value: "IDunidad" },
-  { text: "Tipo", value: "TipoUnidad" },
-  { text: "Zona", value: "Zona" },
-  { text: "Estado", value: "EstadoRuta" },
+  { title: "Responsable", value: "name" },
+  { title: "Ruta", value: "ruta" },
+  { title: "IDunidad", value: "ID" },
+  { title: "Tipo", value: "TipoUnidad" },
+  { title: "Zona", value: "Zona" },
+  { title: "Estado", value: "EstadoRuta" },
 ];
 
 const items = [
-  { responsable: "Arath de Jesus", ruta: "VDCL02", IDunidad: 12, TipoUnidad: "Camion", Zona: 63175, EstadoRuta: "En Curso" },
-  { responsable: "Sergio Michael", ruta: "VDCL01", IDunidad: 11, TipoUnidad: "Camion", Zona: 63175, EstadoRuta: "En Curso" },
+  { name:"Arath de Jesus",
+    ruta: "VDCL02",
+    ID: 12,
+    TipoUnidad: "Camion",
+    Zona: 63175,
+    EstadoRuta: "En Curso"
+  },
+  { name: "Sergio Michael", ruta: "VDCL01", ID: 11, TipoUnidad: "Camion", Zona: 63175, EstadoRuta: "En Curso" },
+  { name: "Jose Fernando", ruta: "CDVL03", ID: 10, TipoUnidad: "Camion", Zona: 63157, EstadoRuta: "Terminada" },
+
 ];
 </script>
 
 <template>
-  <v-container>
     <v-data-table
-      :headers="headers"
-      :items="items"
-      class="elevation-2"
-      width="100%"
-
-    ></v-data-table>
-  </v-container>
+    :headers="headers"
+    :items="items"
+    item-key="name"
+  ></v-data-table>
 </template>
 
-<style scoped>
-/* Agrega estilos si es necesario */
-</style>

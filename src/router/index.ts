@@ -29,6 +29,7 @@ const router = createRouter({
 
       component: () => import('@/views/dashboardViews/DashboardView.vue'),
       children: [
+          {path: '', name: 'dashboardHome', component: () => import('@/features/dashboard/views/DashBoardHomeView.vue')},
           {path: 'unidades', name: 'dashboard', component: () => import('@/features/dashboard/views/UnidadesView.vue')},
       ]
     }

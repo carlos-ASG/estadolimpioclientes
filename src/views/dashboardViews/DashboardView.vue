@@ -1,19 +1,3 @@
-<template>
-  <div class="dashboard">
-    <SidebarMenu />
-    <div class="content">
-      <SearchBar />
-
-      <p :style="{ color: connectionColor }">{{ connectionStatus }}</p>
-
-      <p>Esta es la página principal después de iniciar sesión.</p>
-
-  <RouterView />
-</div>
-    </div>
-
-</template>
-
 <script setup lang="ts">
 import SidebarMenu from '@/features/dashboard/components/SidebarMenu.vue';
 import SearchBar from '../../features/dashboard/components/SearchBar.vue';
@@ -46,7 +30,17 @@ onMounted(() => {
 
 
 </script>
-
+<template>
+  <div class="dashboard">
+    <SidebarMenu />
+    <div class="content">
+      <SearchBar />
+      <p :style="{ color: connectionColor }">{{ connectionStatus }}</p>
+  <RouterView />
+</div>
+    </div>
+    
+</template>
 <style scoped>
 .dashboard {
   display: flex;
