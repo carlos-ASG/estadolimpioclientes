@@ -26,6 +26,7 @@
 
 <script setup lang="ts">
 // Importa las imágenes
+import LogoEL from '@/assets/icons/LogoEL.svg';
 import unidadesIcon from '@/assets/icons/unidades.svg';
 import alertaIcon from '@/assets/icons/alerta.svg';
 import mapaIcon from '@/assets/icons/mapa.svg';
@@ -34,11 +35,12 @@ import solicitarEspIcon from '@/assets/icons/solicitar_esp.svg';
 import zonasIcon from '@/assets/icons/zonas.svg';
 
 const menuItems = [
+  {icon: LogoEL, alt: "Logo EL", text: "", route: "/dashboard"},
   { icon: unidadesIcon, alt: "Unidades", text: "Unidades", route: "/dashboard/unidades" },
   { icon: zonasIcon, alt: "Zonas", text: "Zonas", route: "/dashboard/zonas" },
   { icon: personalIcon, alt: "Personal", text: "Personal", route: "/dashboard/personal" },
-  { icon: "https://placehold.co/44x41", alt: "Pedidos Esp", text: "/dashboard/Pedidos-Esp" },
-  { icon: solicitarEspIcon, alt: "Solicitar Esp", text: "/dashboard/Solicitar-Esp" },
+  { icon: "https://placehold.co/44x41", alt: "Pedidos Esp", text: "Pedidos Esp" },
+  { icon: solicitarEspIcon, alt: "Solicitar Esp", text: "SolicitarEsp" },
   { icon: alertaIcon, alt: "Alertas", text: "Alertas", route: "/dashboard/alertas" },
   { icon: mapaIcon, alt: "Mapa", text: "Mapa", route: "/dashboard/mapa" },
   { icon: "https://placehold.co/51x51", alt: "Cerrar Sesión", text: "Cerrar Sesión" },
