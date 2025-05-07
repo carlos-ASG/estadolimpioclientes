@@ -39,7 +39,7 @@ onMounted(() => {
   <RouterView />
 </div>
     </div>
-    
+
 </template>
 <style scoped>
 .dashboard {
@@ -49,8 +49,8 @@ onMounted(() => {
 
 .content {
   flex: 1;
-  padding: 20px;
-  background-color: var(--background-color, #f9f9f9);
+  ;
+  background-color: var( #ffffff);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -95,7 +95,7 @@ onMounted(() => {
   flex: 1 1 48%; /* Cada tarjeta ocupa el 48% del ancho disponible */
   max-width: 48%; /* Limita el ancho máximo de cada tarjeta */
   height: 400px; /* Altura fija para ambas tarjetas */
-  background: #f7f7f7;
+  background: #ffffff;
   border-radius: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;

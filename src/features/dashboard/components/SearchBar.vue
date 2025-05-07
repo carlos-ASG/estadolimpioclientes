@@ -1,18 +1,29 @@
 <template>
+  <div class="navBar">
     <div class="search-bar">
       <input type="text" placeholder="Buscar..." />
       <img src="@/assets/Image/lupa.png" alt="Buscar" class="search-icon" />
     </div>
+    <img src="../../../assets/Image/EstadoLimpioLogo.webp" alt="">
+  </div>
   </template>
-
   <script setup lang="ts">
   // No se necesita lógica adicional por ahora
   </script>
 
   <style scoped>
+  .navBar {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    height: 10%;
+    background-color: #ffffff; /* Color de fondo */
+  }
+
   .search-bar {
-    width: 400px; /* Más ancha */
-    height: 80px; /* Mantiene el largo */
+    width: 30%; /* Más ancha */
+    height: 50%; /* Mantiene el largo */
     background: #f7f7f7;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px; /* Borde redondeado */
