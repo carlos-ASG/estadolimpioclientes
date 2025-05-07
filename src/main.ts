@@ -1,4 +1,5 @@
 import './assets/main.css'
+import "@mdi/font/css/materialdesignicons.css";
 import './assets/styles/global.css'; // Importa los estilos globales
 import { createVuetify } from 'vuetify';
 import 'vuetify/styles'; // Importa los estilos de Vuetify
