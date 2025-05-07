@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import SinergiaCards from '@/components/SinergiaCards.vue';
-import StatsSection from '@/components/StatsSection.vue';
-import InfoSection from '@/components/InfoSection.vue';
-
+import SinergiaCards from '@/features/landing/components/SinergiaCards.vue';
+import StatsSection from '@/features/landing/components/StatsSection.vue';
+import InfoSection from '@/features/landing/components/InfoSection.vue';
+import NavbarComponent from '@/components/NavbarComponent.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
 const stats = [
   {
     icon: "/src/assets/Image/User.webp",
@@ -32,6 +33,8 @@ const stats = [
 </script>
 
 <template>
+  <!-- Navbar -->
+  <NavbarComponent />
   <!-- Sección principal -->
   <main class="landing">
     <section class="landing-content">
@@ -60,6 +63,8 @@ const stats = [
 
   <!-- Información -->
   <InfoSection />
+  <!-- Footer -->
+  <FooterComponent />
 </template>
 
 <style scoped>

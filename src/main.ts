@@ -5,7 +5,7 @@ import './assets/styles/global.css'; // Importa los estilos globales
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
-import App from './LandingPage.vue'
+import App from './BasePage.vue'
 import router from './router'
 
 const app = createApp(App)

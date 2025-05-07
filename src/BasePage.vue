@@ -1,9 +1,14 @@
 <script setup lang="ts">
+import { RouterView } from 'vue-router';
 
 </script>
 
 <template>
 
-   <H1>AQUI VA EL CONTENIDO PARA EL PRIMER ANCHO</H1>
+
+  <RouterView />
+
 
 </template>
+
+

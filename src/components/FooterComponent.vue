@@ -46,7 +46,7 @@
 
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
-import SocialMediaIcons from './SocialMediaIcons.vue';
+import SocialMediaIcons from '../features/landing/components/SocialMediaIcons.vue';
 </script>
 
 <style scoped>

@@ -8,12 +8,12 @@ import { RouterLink } from 'vue-router';
       <nav class="navbar">
         <ul class="nav-links">
           <li><RouterLink to="/">Inicio</RouterLink></li>
-          <li><RouterLink to="/about">Acerca de</RouterLink></li>
+          <li><RouterLink to="/acerca-de">Acerca de</RouterLink></li>
           <li><RouterLink to="/precios">Precios</RouterLink></li>
           <li><RouterLink to="/contacto">Contacto</RouterLink></li>
         </ul>
         <ul class="auth-links">
-          <li><RouterLink to="/dashboard" class="highlighted">Iniciar Sesión</RouterLink></li>
+          <li><RouterLink to="/InicioSesion" class="highlighted">Iniciar Sesión</RouterLink></li>
           <li><RouterLink to="/registro" class="btn-green">Regístrate</RouterLink></li>
         </ul>
       </nav>

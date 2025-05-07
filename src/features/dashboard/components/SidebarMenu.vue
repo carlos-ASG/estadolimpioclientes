@@ -15,15 +15,15 @@
       </div>
     </aside>
   </template>
-  
+
   <script setup lang="ts">
 // Importa las imágenes
-import unidadesIcon from '@/assets/Image/unidades.svg';
-import alertaIcon from '@/assets/Image/alerta.svg';
-import mapaIcon from '@/assets/Image/mapa.svg';
-import personalIcon from '@/assets/Image/personal.svg';
-import solicitarEspIcon from '@/assets/Image/solicitar_esp.svg';
-import zonasIcon from '@/assets/Image/zonas.svg';
+import unidadesIcon from '@/assets/icons/unidades.svg';
+import alertaIcon from '@/assets/icons/alerta.svg';
+import mapaIcon from '@/assets/icons/mapa.svg';
+import personalIcon from '@/assets/icons/personal.svg';
+import solicitarEspIcon from '@/assets/icons/solicitar_esp.svg';
+import zonasIcon from '@/assets/icons/zonas.svg';
 
 const menuItems = [
   { icon: unidadesIcon, alt: "Unidades", text: "Unidades" },
@@ -36,7 +36,7 @@ const menuItems = [
   { icon: "https://placehold.co/51x51", alt: "Cerrar Sesión", text: "Cerrar Sesión" },
 ];
 </script>
-  
+
   <style scoped>
   .sidebar {
     height: 150vh;
@@ -49,33 +49,33 @@ const menuItems = [
     border-radius: 10px;
     justify-content: space-between;
   }
-  
+
   .status-icons {
     display: flex;
     justify-content: flex-start;
     gap: 8px;
     margin-bottom: 5px; /* Espaciado entre los círculos y el menú */
   }
-  
+
   .icon {
     width: 12px;
     height: 12px;
     border-radius: 50%;
     border: 1px solid transparent; /* Simula el borde del ejemplo */
   }
-  
+
   .icon.red {
     background-color: #ff6252;
   }
-  
+
   .icon.yellow {
     background-color: #fdad15;
   }
-  
+
   .icon.green {
     background-color: #00ff72;
   }
-  
+
   .menu-item {
     display: flex;
     flex-direction: column;
@@ -85,7 +85,7 @@ const menuItems = [
     font-size: 14px;
     font-weight: bold;
   }
-  
+
   .menu-icon {
     width: 80px;
     height: 80px;
@@ -105,12 +105,12 @@ const menuItems = [
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.35); /* Sombra más pronunciada */
     background-color: #f0f0f0; /* Cambia el fondo a un gris claro */
   }
-  
+
   .menu-icon img {
     width: 50%;
     height: auto;
   }
-  
+
   .menu-text {
     margin-top: 8px;
     font-size: 12px;

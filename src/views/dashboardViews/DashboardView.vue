@@ -22,26 +22,26 @@
         </template>
       </draggable>
 
-      
+
       <p>Esta es la página principal después de iniciar sesión.</p>
 
       <!-- Contenedor de MapCard y StatsCard -->
       <div class="cards-container">
   <MapCard class="card" />
   <StatsCard class="card" />
-  
+
 </div>
     </div>
   </div>
 </template>
 
-<script setup>
-import SidebarMenu from '@/components/SidebarMenu.vue';
-import MapCard from '@/components/MapCard.vue';
-import AddCard from '@/components/AddCard.vue';
-import InfoCard from '@/components/InfoCard.vue';
-import SearchBar from '@/components/SearchBar.vue';
-import StatsCard from '@/components/StatsCard.vue'; // Importa el componente
+<script setup lang="ts">
+import SidebarMenu from '@/features/dashboard/components/SidebarMenu.vue';
+import MapCard from '@/features/dashboard/components/MapCard.vue';
+import AddCard from '../../features/dashboard/components/AddCard.vue';
+import InfoCard from '../../features/dashboard/components/InfoCard.vue';
+import SearchBar from '../../features/dashboard/components/SearchBar.vue';
+import StatsCard from '@/features/landing/components/StatsCard.vue'; // Importa el componente
 import draggable from 'vuedraggable';
 import { ref, onMounted } from 'vue';
 import { getDatabase, ref as dbRef, onValue } from 'firebase/database';
@@ -71,10 +71,10 @@ onMounted(() => {
 });
 
 // Importar íconos
-import iconUnidades from '@/assets/Image/unidades.svg';
-import iconZonas from '@/assets/Image/zonas.svg';
-import iconAlertas from '@/assets/Image/alerta.svg';
-import iconPersonal from '@/assets/Image/personal.svg';
+import iconUnidades from '@/assets/icons/unidades.svg';
+import iconZonas from '@/assets/icons/zonas.svg';
+import iconAlertas from '@/assets/icons/alerta.svg';
+import iconPersonal from '@/assets/icons/personal.svg';
 
 const cards = ref([
   { id: 1, title: 'Unidades', value: '36', icon: iconUnidades },
@@ -143,6 +143,6 @@ const cards = ref([
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 
-  
+
 }
 </style>

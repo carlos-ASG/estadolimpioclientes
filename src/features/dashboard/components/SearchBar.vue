@@ -4,11 +4,11 @@
       <img src="@/assets/Image/lupa.png" alt="Buscar" class="search-icon" />
     </div>
   </template>
-  
-  <script setup>
+
+  <script setup lang="ts">
   // No se necesita lógica adicional por ahora
   </script>
-  
+
   <style scoped>
   .search-bar {
     width: 400px; /* Más ancha */
@@ -24,7 +24,7 @@
     padding: 10px 15px;
     margin: 0 auto; /* Centra horizontalmente */
   }
-  
+
   .search-bar input {
     flex: 1;
     border: none;
@@ -34,7 +34,7 @@
     font-family: Inter, sans-serif;
     color: #333;
   }
-  
+
   .search-bar .search-icon {
     width: 10px; /* Tamaño del ícono */
     height: 10px;

@@ -1,8 +1,8 @@
 <template>
     <Line :data="data" :options="options" />
   </template>
-  
-  <script setup>
+
+  <script setup lang="ts">
   import {
     Chart as ChartJS,
     LineElement,
@@ -12,9 +12,9 @@
     Tooltip,
   } from 'chart.js';
   import { Line } from 'vue-chartjs';
-  
+
   ChartJS.register(LineElement, PointElement, CategoryScale, LinearScale, Tooltip);
-  
+
   const data = {
     labels: ['SEP', 'OCT', 'NOV', 'DEC', 'JAN', 'FEB'],
     datasets: [
@@ -30,7 +30,7 @@
       },
     ],
   };
-  
+
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -65,7 +65,7 @@
     },
   };
   </script>
-  
+
   <style scoped>
   canvas {
     max-height: 160px;

@@ -1,26 +1,34 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/LandingView.vue'
+import landing from '../views/landingViews/LandingView.vue' // Ensure this path matches the actual file location
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView,
+      name: 'landing',
+      component: landing,
     },
     {
-      path: '/about',
+      path: '/acerca-de',
       name: 'about',
-      component: () => import('../views/AboutView.vue'),
+      component: () => import('../views/landingViews/AboutView.vue'),
+    },
+    {
+      path: '/registro',
+      name: 'register',
+      component: () => import('../views/authViews/RegisterView.vue'),
+    },
+    {
+      path: '/InicioSesion',
+      name: 'login',
+      component: () => import('../views/authViews/LogInView.vue'),
     },
     {
       path: '/dashboard',
       name: 'dashboard',
-      // @ts-ignore
-        component: () => import('../views/DashboardView.vue'),
-      meta: { hideNavbar: true, hideFooter: true }, // Meta para ocultar el Footer
-    },
+      component: () => import('../views/dashboardViews/DashboardView.vue'),
+    }
   ],
 })
 

@@ -1,3 +1,8 @@
+
+<script lang="ts" setup>
+
+</script>
+
 <template>
   <div class="flex justify-center items-center min-h-screen bg-gray-50">
     <div class="social-buttons-container flex flex-row space-x-6">
@@ -8,9 +13,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" setup>
-</script>
 
 <style scoped>
 .social-buttons-container {
