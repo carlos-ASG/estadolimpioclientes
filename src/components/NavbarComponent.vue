@@ -50,6 +50,13 @@ import { RouterLink } from 'vue-router';
   color: #333;
   font-size: 16px;
   font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease; /* Animación suave */
+}
+
+.nav-links li a:hover,
+.auth-links li a:hover {
+  color: #34A853; /* Cambia el color al pasar el mouse */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
 }
 
 .auth-links .highlighted {
@@ -63,9 +70,11 @@ import { RouterLink } from 'vue-router';
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Animación suave */
 }
 
 .auth-links .btn-green:hover {
-  background-color: #2c8c47;
+  background-color: #2c8c47; /* Cambia el color de fondo al pasar el mouse */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
 }
 </style>
