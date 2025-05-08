@@ -49,19 +49,17 @@ onMounted(() => {
 
 .content {
   flex: 1;
-  ;
-  background-color: var( #ffffff);
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 5px;
+  padding: 20px;
 }
 
 /* Contenedor de las tarjetas InfoCard */
 .info-cards-container {
   display: flex;
-  gap: 20px;
-  padding: 10px;
   justify-content: flex-start;
   align-items: flex-start;
   overflow: visible;
@@ -86,9 +84,8 @@ onMounted(() => {
   gap: 20px;
   justify-content: space-between; /* Asegura que las tarjetas estén separadas */
   align-items: flex-start;
-  min-width: 20px;
-  width: 100%; /* Asegura que el contenedor no exceda el ancho de la página */
   flex-wrap: wrap; /* Permite que las tarjetas se ajusten si no hay suficiente espacio */
+  width: 100%; /* Asegura que el contenedor no exceda el ancho de la página */
 }
 
 .card {
@@ -99,7 +96,8 @@ onMounted(() => {
   border-radius: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-
-
+  transition: all 0.3s ease;
 }
+
+
 </style>

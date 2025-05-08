@@ -2,7 +2,7 @@
   <footer class="footer-container">
     <div class="footer-grid">
       <div class="footer-column">
-        <img class="brand-logo" src="/src/assets/Image/EstadoLimpioLogo.webp" alt="Logo Estado Limpio">
+        <img class="brand-logo" src="@/assets/icons/EstadoLimpioLogo.webp" alt="Logo Estado Limpio">
         <div class="footer-description">
           <p>&copy; 2025 Estado Limpio. Todos los derechos reservados.</p>
         </div>

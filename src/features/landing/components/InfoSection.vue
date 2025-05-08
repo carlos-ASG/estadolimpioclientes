@@ -1,7 +1,7 @@
 <template>
   <section class="info-section">
     <div class="info-container">
-      <img class="info-image" src="/src/assets/image/reciclar.webp" alt="Imagen de Estado Limpio">
+      <img class="info-image" src="@/assets/icons/reciclar.webp" alt="Imagen de Estado Limpio">
       <div class="info-text">
         <h2 class="info-title text-bold">Estado Limpio</h2>
         <p class="info-description text-light">

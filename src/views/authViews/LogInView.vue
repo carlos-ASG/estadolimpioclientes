@@ -8,7 +8,7 @@ import NavbarComponent from '@/components/NavbarComponent.vue';
     <!-- Formulario de inicio de sesión dentro de una tarjeta -->
     <aside class="form-card">
       <form class="form" method="POST" action="">
-        <img src="../../assets/Image/EstadoLimpioLogo.webp" alt="Logo Estado Limpio" class="logo">
+        <img src="../../assets/icons/EstadoLimpioLogo.webp" alt="Logo Estado Limpio" class="logo">
 
         <!-- Campos del formulario -->
         <div class="form-group">

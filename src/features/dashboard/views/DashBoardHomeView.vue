@@ -1,16 +1,15 @@
 <script setup lang="ts">
 import MapCard from '@/features/dashboard/components/MapCard.vue';
-import AddCard from '@/features/dashboard/components/AddCard.vue';
 import InfoCard from '@/features/dashboard/components/InfoCard.vue'; // Importa el componente
 import StatsCard from '@/features/landing/components/StatsCard.vue'; // Importa el componente
 import draggable from 'vuedraggable';
 import { ref} from 'vue';
 
 // Importar íconos
-import iconUnidades from '@/assets/icons/unidades.svg';
-import iconZonas from '@/assets/icons/zonas.svg';
-import iconAlertas from '@/assets/icons/alerta.svg';
-import iconPersonal from '@/assets/icons/personal.svg';
+import iconUnidades from '@/assets/icons/unidades.webp';
+import iconZonas from '@/assets/icons/zonas.webp';
+import iconAlertas from '@/assets/icons/Alerta.webp';
+import iconPersonal from '@/assets/icons/personal.webp';
 
 const cards = ref([
   { id: 1, title: 'Unidades', value: '36', icon: iconUnidades },
@@ -20,8 +19,11 @@ const cards = ref([
 ]);
 </script>
 <template>
-    <!-- Tarjetas arrastrables -->
-    <draggable
+  <!-- Contenedor general con grid -->
+  <div class="main-grid-container">
+    <!-- InfoCard -->
+    <div class="main-grid-item info">
+      <draggable
         v-model="cards"
         class="info-cards-container"
         animation="200"
@@ -35,40 +37,127 @@ const cards = ref([
           </div>
         </template>
       </draggable>
+    </div>
 
-      <!-- Contenedor de MapCard y StatsCard -->
-      <div class="cards-container">
-  <MapCard class="card" />
-  <StatsCard class="card" />
-</div>
+    <!-- MapCard -->
+    <div class="main-grid-item map">
+      <MapCard />
+    </div>
 
+    <!-- StatsCard -->
+    <div class="main-grid-item stats">
+      <StatsCard />
+    </div>
 
+    <!-- Módulo 3 -->
+    <div class="main-grid-item module-3">
+      Módulo 3
+    </div>
+
+    <!-- Módulo 4 -->
+    <div class="main-grid-item module-4">
+      Módulo 4
+    </div>
+  </div>
 </template>
 
 <style scoped>
-.dashboard {
-  display: flex;
-  height: 100vh;
-}
-
 .content {
   flex: 1;
-  padding: 20px;
-  background-color: var(--background-color, #f9f9f9);
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 5px; /* Reduce el espacio entre los elementos */
+  padding: 10px; /* Reduce el padding interno */
+}
+
+p {
+  margin-bottom: 5px; /* Reduce el espacio debajo del texto "Conectado" */
+}
+
+/* Contenedor general */
+.main-grid-container {
+  display: grid;
+  grid-template-rows: 0.2fr 0.5fr 0.5fr; /* Aumenta las proporciones de las filas inferiores */
+  grid-template-columns: 1.2fr 0.8fr; /* La primera columna es más ancha que la segunda */
+  gap: 10px; /* Espaciado entre los elementos */
+  width: 100%;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  box-sizing: border-box;
+  margin: 0; /* Elimina cualquier margen */
+  padding: 0; /* Elimina cualquier padding */
+  overflow: hidden; /* Evita el scroll */
+}
+
+/* Elementos del grid */
+.main-grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF; /* Fondo gris claro */
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%; /* Ajusta el ancho al tamaño de la celda */
+  height: 100%; /* Ajusta la altura al tamaño de la celda */
+  overflow: hidden; /* Evita que el contenido interno desborde */
+}
+
+/* Estilos específicos para cada área */
+.info {
+  grid-column: 1 / 3; /* Ocupa ambas columnas */
+  grid-row: 1 / 2; /* Primera fila */
+}
+
+.map {
+  grid-column: 1 / 2; /* Primera columna */
+  grid-row: 2 / 3; /* Segunda fila */
+  background-color: #FFFFFF; /* Fondo rojo claro */
+}
+
+.stats {
+  grid-column: 2 / 3; /* Segunda columna */
+  grid-row: 2 / 3; /* Segunda fila */
+  background-color: #ccffcc; /* Fondo verde claro */
+}
+
+.module-3 {
+  grid-column: 1 / 2; /* Ocupa la primera columna */
+  grid-row: 3 / 4; /* Tercera fila */
+  background-color: #ccccff; /* Fondo azul claro */
+}
+
+.module-4 {
+  grid-column: 2 / 3; /* Ocupa la segunda columna */
+  grid-row: 3 / 4; /* Tercera fila */
+  background-color: #ffffcc; /* Fondo amarillo claro */
 }
 
 /* Contenedor de las tarjetas InfoCard */
 .info-cards-container {
   display: flex;
-  gap: 20px;
-  padding: 10px;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
   align-items: flex-start;
-  overflow: visible;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+/* Tarjetas individuales */
+.drag-handle {
+  flex: 1 1 calc(24% - 10px); /* Ajusta el tamaño de las tarjetas para que ocupen más espacio */
+  max-width: calc(24% - 10px); /* Limita el ancho máximo de cada tarjeta */
+  min-width: 200px; /* Asegura un ancho mínimo */
+  height: 100%; /* Ajusta la altura al tamaño de la celda */
+  text-align: center; /* Centra el contenido de las tarjetas */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+  margin: 0; /* Elimina márgenes adicionales */
 }
 
 /* Área arrastrable */
@@ -82,28 +171,5 @@ const cards = ref([
   opacity: 0.8;
   transform: scale(1.03);
   transition: transform 0.2s ease;
-}
-
-/* Contenedor de MapCard y StatsCard */
-.cards-container {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between; /* Asegura que las tarjetas estén separadas */
-  align-items: flex-start;
-  min-width: 20px;
-  width: 100%; /* Asegura que el contenedor no exceda el ancho de la página */
-  flex-wrap: wrap; /* Permite que las tarjetas se ajusten si no hay suficiente espacio */
-}
-
-.card {
-  flex: 1 1 48%; /* Cada tarjeta ocupa el 48% del ancho disponible */
-  max-width: 48%; /* Limita el ancho máximo de cada tarjeta */
-  height: 400px; /* Altura fija para ambas tarjetas */
-  background: #f7f7f7;
-  border-radius: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-
-
 }
 </style>

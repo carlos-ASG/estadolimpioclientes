@@ -6,25 +6,25 @@ import NavbarComponent from '@/components/NavbarComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
 const stats = [
   {
-    icon: "/src/assets/Image/User.webp",
+    icon: "@/assets/icons/User.webp",
     alt: "Icono Usuarios",
     value: "2,245,341",
     label: "Usuarios",
   },
   {
-    icon: "/src/assets/Image/Gvb.webp",
+    icon: "@/assets/icons/Gvb.webp",
     alt: "Icono Gobiernos",
     value: "46,328",
     label: "Gobiernos involucrados",
   },
   {
-    icon: "/src/assets/Image/Recursos.webp",
+    icon: "@/assets/icons/Recursos.webp",
     alt: "Icono Recursos",
     value: "828,867",
     label: "Recursos Compartidos",
   },
   {
-    icon: "/src/assets/Image/Card.webp",
+    icon: "@/assets/icons/Card.webp",
     alt: "Icono Empresas",
     value: "1,926,436",
     label: "Empresas Asociadas",
@@ -51,7 +51,7 @@ const stats = [
     </section>
 
     <aside class="landing-aside">
-      <img src="/src/assets/Image/boteBasura.webp" alt="IMAGEN DE BOTE DE BASURA">
+      <img src="@/assets/icons/boteBasura.webp" alt="iconsN DE BOTE DE BASURA">
     </aside>
   </main>
 

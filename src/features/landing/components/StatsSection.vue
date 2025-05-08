@@ -27,25 +27,25 @@
 <script setup lang="ts">
 const stats = [
   {
-    icon: "/src/assets/Image/User.webp",
+    icon: "src/assets/icons/User.webp",
     alt: "Icono Usuarios",
     value: "2,245,341",
     label: "Usuarios",
   },
   {
-    icon: "/src/assets/Image/Gvb.webp",
+    icon: "src/assets/icons/Gvb.webp",
     alt: "Icono Gobiernos",
     value: "46,328",
     label: "Gobiernos involucrados",
   },
   {
-    icon: "/src/assets/Image/Recursos.webp",
+    icon: "src/assets/icons/Recursos.webp",
     alt: "Icono Recursos",
     value: "828,867",
     label: "Recursos Compartidos",
   },
   {
-    icon: "/src/assets/Image/Card.webp",
+    icon: "src/assets/icons/Card.webp",
     alt: "Icono Empresas",
     value: "1,926,436",
     label: "Empresas Asociadas",

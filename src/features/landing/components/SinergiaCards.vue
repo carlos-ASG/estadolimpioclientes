@@ -23,19 +23,19 @@
 <script setup lang="ts">
 const sinergiaItems = [
   {
-    icon: "/src/assets/Image/Ciudadanos.webp",
+    icon: "src/assets/icons/Ciudadanos.webp",
     alt: "Icono Ciudadanos",
     title: "Ciudadanos",
     description: "Como usuarios finales del sistema",
   },
   {
-    icon: "/src/assets/Image/Gvb.webp",
+    icon: "src/assets/icons/Gvb.webp",
     alt: "Icono Gobiernos",
     title: "Gobiernos",
     description: "Como principal herramienta para gestionar los RSU en la población",
   },
   {
-    icon: "/src/assets/Image/Organizaciones.webp",
+    icon: "src/assets/icons/Organizaciones.webp",
     alt: "Icono Organizaciones",
     title: "Organizaciones privadas",
     description: "Como sistema de gestión y control",

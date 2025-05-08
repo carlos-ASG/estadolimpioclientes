@@ -1,23 +1,11 @@
 <template>
-  <div class="map-card" :style="{ width: width, height: height }">
+  <div class="map-card">
     <div id="map" class="google-map"></div>
   </div>
 </template>
 
-<script setup>
-import { onMounted, defineProps } from 'vue';
-
-// Props para ancho y alto
-defineProps({
-  width: {
-    type: String,
-    default: '700px', // Valor por defecto
-  },
-  height: {
-    type: String,
-    default: '400px', // Valor por defecto
-  },
-});
+<script setup lang="ts">
+import { onMounted } from 'vue';
 
 const apiKey = 'AIzaSyCQiN6OwVABU9E2_FO_GC8uGa2G1hGO4lI';
 
@@ -61,18 +49,18 @@ onMounted(() => {
 
 <style scoped>
 .map-card {
+  width: 100%; /* Ajusta el ancho al 100% del contenedor padre */
+  height: 100%; /* Ajusta la altura al 100% del contenedor padre */
   background-color: #f7f7f7;
   border-radius: 20px;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   outline: 1px solid rgba(0, 0, 0, 0.35);
   outline-offset: -1px;
-  
-  
 }
 
 .google-map {
-  width: 100%;
-  height: 100%;
+  width: 100%; /* Ajusta el ancho al 100% del contenedor padre */
+  height: 100%; /* Ajusta la altura al 100% del contenedor padre */
 }
 </style>

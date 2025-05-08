@@ -25,53 +25,52 @@
 </template>
 
 <script setup lang="ts">
-// Importa las imágenes
-import LogoEL from '@/assets/icons/LogoEL.svg';
-import unidadesIcon from '@/assets/icons/unidades.svg';
-import alertaIcon from '@/assets/icons/alerta.svg';
-import mapaIcon from '@/assets/icons/mapa.svg';
-import personalIcon from '@/assets/icons/personal.svg';
-import solicitarEspIcon from '@/assets/icons/solicitar_esp.svg';
-import zonasIcon from '@/assets/icons/zonas.svg';
+import LogoEL from '@/assets/icons/LogoEL.webp';
+import unidadesIcon from '@/assets/icons/unidades.webp';
+import alertaIcon from '@/assets/icons/Alerta.webp';
+import mapaIcon from '@/assets/icons/mapa.webp';
+import personalIcon from '@/assets/icons/personal.webp';
+import solicitarEspIcon from '@/assets/icons/solicitar_esp.webp';
+import zonasIcon from '@/assets/icons/zonas.webp';
+import salir from '@/assets/icons/salir.webp';
 
 const menuItems = [
   {icon: LogoEL, alt: "Logo EL", text: "", route: "/dashboard"},
   { icon: unidadesIcon, alt: "Unidades", text: "Unidades", route: "/dashboard/unidades" },
   { icon: zonasIcon, alt: "Zonas", text: "Zonas", route: "/dashboard/zonas" },
   { icon: personalIcon, alt: "Personal", text: "Personal", route: "/dashboard/personal" },
-  { icon: "https://placehold.co/44x41", alt: "Pedidos Esp", text: "Pedidos Esp" },
-  { icon: solicitarEspIcon, alt: "Solicitar Esp", text: "SolicitarEsp" },
+  { icon: solicitarEspIcon, alt: "Especiales", text: "Especiales" },
   { icon: alertaIcon, alt: "Alertas", text: "Alertas", route: "/dashboard/alertas" },
   { icon: mapaIcon, alt: "Mapa", text: "Mapa", route: "/dashboard/mapa" },
-  { icon: "https://placehold.co/51x51", alt: "Cerrar Sesión", text: "Cerrar Sesión" },
+  { icon: salir, alt: "Cerrar Sesión", text: "Salir" },
 ];
 </script>
 
 <style scoped>
 .sidebar {
-  height: 150vh;
-  width: 120px;
+  height: 100vh; /* Ajusta la altura al 100% de la pantalla */
+  width: 10%; /* Ajusta el ancho como porcentaje */
   background-color: #34a853;
-  padding: 22px 12px;
+  padding: 2% 1%; /* Ajusta el padding como porcentaje */
   display: flex;
   flex-direction: column;
-  gap: 21px;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
   border-radius: 10px;
-  justify-content: space-between;
 }
 
 .status-icons {
   display: flex;
-  justify-content: flex-start;
-  gap: 8px;
-  margin-bottom: 5px; /* Espaciado entre los círculos y el menú */
+  justify-content: center; /* Centra los círculos horizontalmente */
+  gap: 5%; /* Espaciado entre los círculos */
+  margin-bottom: 15%;
 }
 
 .icon {
-  width: 12px;
-  height: 12px;
+  width: 5%; /* Ajusta el tamaño como porcentaje */
+  height: auto; /* Ajusta el tamaño como porcentaje */
   border-radius: 50%;
   border: 1px solid transparent; /* Simula el borde del ejemplo */
+  padding: 6%; /* Agrega padding para completar la propiedad */
 }
 
 .icon.red {
@@ -89,25 +88,26 @@ const menuItems = [
 .menu-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
+  gap: 10%; /* Incrementa el espaciado entre los íconos */
+  flex-grow: 1;
+  justify-content: space-between;
 }
 
 .menu-icon {
-  width: 80px;
-  height: 80px;
+  width: 61%; /* Reduce el ancho del cuadro */
+  aspect-ratio: 1; /* Mantiene una proporción cuadrada */
   background-color: white;
   border-radius: 13px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20%; /* Incrementa el espaciado entre los cuadros */
   justify-content: center;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative; /* Cambia 'center' a 'relative' */
+  margin: 0 auto; /* Centra el ícono horizontalmente */
+  margin-bottom: 10%; /* Agrega un margen inferior para mayor separación */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Corrige el doble punto y coma */
 }
 
 .menu-icon:hover {
@@ -117,14 +117,17 @@ const menuItems = [
 }
 
 .menu-icon img {
-  width: 50%;
-  height: auto;
+  width: 50%; /* Ajusta el tamaño del ícono como porcentaje del contenedor */
+  height: auto; /* Mantiene la proporción del ícono */
 }
 
 .menu-text {
-  margin-top: 8px;
-  font-size: 12px;
-  color: #000;
+  margin-top: 3%; /* Ajusta el margen superior como porcentaje */
+  font-size: 68%; /* Reduce el tamaño del texto */
+  font-family: Inter, sans-serif; /* Aplica la fuente Inter */
+  font-weight: 550; /* Aplica el peso de la fuente */
+  color: black; /* Cambia el color del texto a negro */
   text-align: center;
 }
+
 </style>
