@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import landing from '@/views/landingViews/LandingView.vue' // Ensure this path matches the actual file location
+import landing from '../ui/landing/components/LandingView.vue' // Ensure this path matches the actual file location
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,25 +12,25 @@ const router = createRouter({
     {
       path: '/acerca-de',
       name: 'about',
-      component: () => import('@/views/landingViews/AboutView.vue'),
+      component: () => import('@/ui/landing/components/AboutView.vue'),
     },
     {
       path: '/registro',
       name: 'register',
-      component: () => import('@/views/authViews/RegisterView.vue'),
+      component: () => import('@/ui/auth/register/components/RegisterView.vue'),
     },
     {
       path: '/InicioSesion',
       name: 'login',
-      component: () => import('@/views/authViews/LogInView.vue'),
+      component: () => import('@/ui/auth/login/components/LogInView.vue'),
     },
     {
       path: '/dashboard',
 
-      component: () => import('@/views/dashboardViews/DashboardView.vue'),
+      component: () => import('@/ui/dashboard/components/DashboardView.vue'),
       children: [
-          {path: '', name: 'dashboardHome', component: () => import('@/features/dashboard/views/DashBoardHomeView.vue')},
-          {path: 'unidades', name: 'dashboard', component: () => import('@/features/dashboard/views/UnidadesView.vue')},
+          {path: '', name: 'dashboardHome', component: () => import('@/ui/dashboard/components/DashBoardHomeView.vue')},
+          {path: 'unidades', name: 'dashboard', component: () => import('@/ui/dashboard/components/UnidadesView.vue')},
       ]
     }
   ],

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import SinergiaCards from '@/features/landing/components/SinergiaCards.vue';
-import StatsSection from '@/features/landing/components/StatsSection.vue';
-import InfoSection from '@/features/landing/components/InfoSection.vue';
-import NavbarComponent from '@/components/NavbarComponent.vue';
-import FooterComponent from '@/components/FooterComponent.vue';
+import SinergiaCards from './SinergiaCards.vue';
+import StatsSection from './StatsSection.vue';
+import InfoSection from './InfoSection.vue';
+import NavbarComponent from '../core/NavbarComponent.vue';
+import FooterComponent from '../core/FooterComponent.vue';
 const stats = [
   {
     icon: "@/assets/icons/User.webp",
