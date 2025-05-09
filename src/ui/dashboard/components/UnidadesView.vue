@@ -16,24 +16,39 @@ const DEFAULT_RECORD = {
   EstadoRuta: "",
 };
 */
+// Lista de datos actualizada
 const items = ref([
-  { id: 1, name: "Arath de Jesus", ruta: "VDCL02", ID: 12, TipoUnidad: "Camion", Zona: 63175, EstadoRuta: "En Curso" },
-  { id: 2, name: "Sergio Michael", ruta: "VDCL01", ID: 11, TipoUnidad: "Camion", Zona: 63175, EstadoRuta: "En Curso" },
-  { id: 3, name: "Jose Fernando", ruta: "CDVL03", ID: 10, TipoUnidad: "Camion", Zona: 63157, EstadoRuta: "Terminada" },
+  { tipo: "Camión", marca: "Chevrolet", modelo: "F1500", año: 2007, color: "Blanco", placa: "ABC-1234", capacidad: "3 Toneladas", fecha: "2023-01-15", serie: "CHV1234567890" },
+  { tipo: "Camión", marca: "Izuzu", modelo: "MIYASAKI", año: 1993, color: "Beige", placa: "XYZ-5678", capacidad: "2 Toneladas", fecha: "2023-02-10", serie: "IZU9876543210" },
+  { tipo: "Camión", marca: "BMW", modelo: "HKG36", año: 2001, color: "Blanco", placa: "LMN-3456", capacidad: "4 Toneladas", fecha: "2023-03-05", serie: "BMW2468135790" },
+  { tipo: "Camioneta", marca: "Toyota", modelo: "Hilux", año: 2015, color: "Rojo", placa: "TUV-1122", capacidad: "1.5 Toneladas", fecha: "2023-04-20", serie: "TOY1230987654" },
+  { tipo: "Camión", marca: "Ford", modelo: "F-350", año: 2010, color: "Negro", placa: "JKL-7788", capacidad: "3.5 Toneladas", fecha: "2023-05-12", serie: "FRD4567891230" },
+  { tipo: "Camión", marca: "Mercedes-Benz", modelo: "Actros", año: 2018, color: "Azul", placa: "OPQ-3344", capacidad: "5 Toneladas", fecha: "2023-06-18", serie: "MBZ7896541230" },
+  { tipo: "Camión", marca: "Volvo", modelo: "FH16", año: 2020, color: "Gris", placa: "RST-9900", capacidad: "6 Toneladas", fecha: "2023-07-25", serie: "VOL1122334455" },
+  { tipo: "Camioneta", marca: "Nissan", modelo: "Frontier", año: 2013, color: "Verde", placa: "UVW-5566", capacidad: "2 Toneladas", fecha: "2023-08-14", serie: "NIS9876543210" },
+  { tipo: "Camión", marca: "Mack", modelo: "Anthem", año: 2019, color: "Amarillo", placa: "XYZ-7788", capacidad: "4 Toneladas", fecha: "2023-09-01", serie: "MCK1234567890" },
+  { tipo: "Camión", marca: "Kenworth", modelo: "T680", año: 2021, color: "Blanco", placa: "ABC-9900", capacidad: "5 Toneladas", fecha: "2023-10-10", serie: "KEN9876543210" },
+  { tipo: "Camioneta", marca: "Chevrolet", modelo: "Silverado", año: 2016, color: "Negro", placa: "DEF-2233", capacidad: "3 Toneladas", fecha: "2023-11-05", serie: "CHV2468135790" },
+  { tipo: "Camión", marca: "Scania", modelo: "R450", año: 2017, color: "Azul", placa: "GHI-4455", capacidad: "6 Toneladas", fecha: "2023-12-12", serie: "SCA1357924680" },
+  { tipo: "Camión", marca: "MAN", modelo: "TGX", año: 2014, color: "Gris", placa: "JKL-6677", capacidad: "5 Toneladas", fecha: "2023-01-20", serie: "MAN0987654321" },
+  { tipo: "Camión", marca: "Freightliner", modelo: "Cascadia", año: 2022, color: "Blanco", placa: "MNO-8899", capacidad: "7 Toneladas", fecha: "2023-02-15", serie: "FRL1234567890" },
+  { tipo: "Camioneta", marca: "Ford", modelo: "Ranger", año: 2012, color: "Rojo", placa: "PQR-5566", capacidad: "1.8 Toneladas", fecha: "2023-03-30", serie: "FRD0987654321" },
 ]);
-
 /*const record = ref({ ...DEFAULT_RECORD });
 const dialog = shallowRef(false);
 const isEditing = shallowRef(false);
 */
 const headers = [
-  { title: "Responsable", value: "name", align: "start" },
-  { title: "Ruta", value: "ruta" },
-  { title: "ID Unidad", value: "ID" },
-  { title: "Tipo", value: "TipoUnidad" },
-  { title: "Zona", value: "Zona" },
-  { title: "Estado", value: "EstadoRuta" },
-  { title: "Acciones", value: "actions", align: "end", sortable: false },
+  { title: "Tipo Unidad", value: "tipo", align: "start" },
+  { title: "Marca", value: "marca" },
+  { title: "Modelo", value: "modelo" },
+  { title: "Año de Fabricacion", value: "año" },
+  { title: "Color", value: "color" },
+  { title: "Matricula", value: "placa" },
+  { title: "Capacidad Máxima", value: "capacidad" },
+  { title: "Fecha de Registro", value: "fecha" },
+  { title: "Numero de Serie", value: "serie", align: "end", sortable: false },
+  { title: "Opciones", value: "actions", align: "end", sortable: false },
 ];
 
 /* Funciones
@@ -64,8 +79,6 @@ function remove(id: number) {
 
 <template>
   <v-container fluid background-color="white" class="d-flex flex-column align-center">
-    <h1>Unidades</h1>
-
     <!-- Tabla -->
     <v-data-table
       :headers="headers"
@@ -76,8 +89,10 @@ function remove(id: number) {
       <!-- Botón superior -->
       <template v-slot:top>
         <v-toolbar
-         flat
-         color="transparent">
+        flat
+          density="compact"
+          color="transparent"
+          title="Unidades">
           <v-spacer></v-spacer>
           <v-btn
             prepend-icon="mdi-plus"

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import SidebarMenu from '@/features/dashboard/components/SidebarMenu.vue';
-import SearchBar from '../../features/dashboard/components/SearchBar.vue';
+import SidebarMenu from '@/ui/dashboard/components/SidebarMenu.vue';
+import SearchBar from '@/ui/dashboard/components/SearchBar.vue';
 import { ref, onMounted } from 'vue';
 import { getDatabase, ref as dbRef, onValue } from 'firebase/database';
 import { app } from '@/firebaseConfig';

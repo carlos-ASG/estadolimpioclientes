@@ -2,8 +2,8 @@
 import SinergiaCards from './SinergiaCards.vue';
 import StatsSection from './StatsSection.vue';
 import InfoSection from './InfoSection.vue';
-import NavbarComponent from '../core/NavbarComponent.vue';
-import FooterComponent from '../core/FooterComponent.vue';
+import NavbarComponent from '@/ui/core/NavbarComponent.vue';
+import FooterComponent from '@/ui/core/FooterComponent.vue';
 const stats = [
   {
     icon: "@/assets/icons/User.webp",

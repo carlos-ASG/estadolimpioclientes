@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import MapCard from '@/features/dashboard/components/MapCard.vue';
-import InfoCard from '@/features/dashboard/components/InfoCard.vue'; // Importa el componente
-import StatsCard from '@/features/landing/components/StatsCard.vue'; // Importa el componente
+import MapCard from '@/ui/dashboard/components/MapCard.vue';
+import InfoCard from '@/ui/dashboard/components/InfoCard.vue'; // Importa el componente
+import StatsCard from '@/ui/landing/components/StatsCard.vue'; // Importa el componente
 import draggable from 'vuedraggable';
 import { ref} from 'vue';
 

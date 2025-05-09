@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import LineChart from '@/features/dashboard/components/LineChart.vue';
+import LineChart from '@/ui/dashboard/components/LineChart.vue';
 </script>
 
 <style scoped>
