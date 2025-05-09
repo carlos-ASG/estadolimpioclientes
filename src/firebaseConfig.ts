@@ -1,6 +1,8 @@
 // Importa las funciones necesarias del SDK de Firebase
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 
 // Configuración de Firebase para tu aplicación
 const firebaseConfig = {
@@ -16,11 +18,8 @@ const firebaseConfig = {
 
 // Inicializa Firebase
 const app = initializeApp(firebaseConfig);
-
-// Inicializa Analytics (opcional)
 const analytics = getAnalytics(app);
+const firestore = getFirestore(app);
+const auth = getAuth(app);
 
-// Verifica si Firebase se inicializó correctamente
-console.log("Firebase app initialized:", app.name || "[DEFAULT]");
-
-export { app, analytics };
+export { app, analytics, firestore, auth };

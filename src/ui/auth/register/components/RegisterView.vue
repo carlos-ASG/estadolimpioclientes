@@ -1,19 +1,34 @@
-<script lang="ts">
-export default {
-  name: "RegisterView",
-  data() {
-    return {
-      fechaNacimiento: "",
-      servicioRecoleccion: "",
-    };
-  },
-  methods: {
-    volver() {
-      this.$router.push( '/'); // Redirige a la página de inicio de sesión
-    },
-  },
+<script setup lang="ts">
+import { ref } from 'vue';
+import { useAuthStore } from '@/stores/authStore/registerAuthViewModel';
+
+const authStore = useAuthStore();
+
+const formData = ref({
+  name: '',
+  email: '',
+  password: '',
+});
+
+const entityType = ref<'user' | 'company'>('user');
+
+const handleRegister = async () => {
+  if (!formData.value.name || !formData.value.email || !formData.value.password) {
+    alert('Por favor, complete todos los campos obligatorios.');
+    return;
+  }
+
+  await authStore.registerEntity(entityType.value, formData.value)
+    .then(() => {
+      alert('Registro exitoso');
+    })
+    .catch((err) => {
+      console.error('Error al registrar:', err);
+      alert('Error al registrar. Por favor, inténtelo de nuevo más tarde.');
+    });
 };
 </script>
+
 <template>
   <div class="centered-container">
     <h1>
@@ -23,41 +38,39 @@ export default {
 
   <div class="grid-container">
     <!-- Columna 1 -->
-    <div class="grid-item"><input type="text" placeholder="Nombre" /></div>
-    <div class="grid-item"><input type="email" placeholder="Correo" /></div>
+    <div class="grid-item"><input v-model="formData.name" type="text" placeholder="Nombre" /></div>
+    <div class="grid-item"><input v-model="formData.email" type="email" placeholder="Correo" /></div>
     <div class="grid-item"><input type="text" placeholder="Código postal" /></div>
     <div class="grid-item"><input type="text" placeholder="Apellido Paterno" /></div>
     <div class="grid-item"><input type="text" placeholder="Usuario" /></div>
-    <div class="grid-item"><input type="password" placeholder="Colonia" /></div>
+    <div class="grid-item"><input type="text" placeholder="Colonia" /></div>
 
     <!-- Columna 2 -->
     <div class="grid-item"><input type="text" placeholder="Apellido Materno" /></div>
-    <div class="grid-item"><input type="text" placeholder="Contraseña" /></div>
+    <div class="grid-item"><input v-model="formData.password" type="password" placeholder="Contraseña" /></div>
     <div class="grid-item"><input type="text" placeholder="Entre Calle 1" /></div>
-    <div class="grid-item">
-      <input type="date" v-model="fechaNacimiento"
+     <!-- <div class="grid-item"> <input type="date" v-model="fechaNacimiento"
         :class="{ 'placeholder-date': !fechaNacimiento, 'filled-date': fechaNacimiento }" />
-    </div>
-    <div class="grid-item"><input type="text" placeholder="Confirmar contraseña" /></div>
-    <div class="grid-item"><input type="password" placeholder="Entre Calle 2" /></div>
+       </div>-->
+    <div class="grid-item"><input type="password" placeholder="Confirmar contraseña" /></div>
+    <div class="grid-item"><input type="text" placeholder="Entre Calle 2" /></div>
 
     <!-- Columna 3 -->
     <div class="grid-item"><input type="text" placeholder="Razon Social" /></div>
     <div class="grid-item"><input type="text" placeholder="Estado" /></div>
-    <div class="grid-item">
-      <select v-model="servicioRecoleccion" :class="{ 'placeholder-select': !servicioRecoleccion }">
-        <option disabled value="">¿Presta Servicios de Recolección?</option>
-        <option value="si">Sí</option>
-        <option value="no">No</option>
-      </select>
+ <div class="grid-item">
+  <select v-model="entityType">
+      <option value="user">Usuario</option>
+      <option value="company">Empresa</option>
+    </select>
     </div>
     <div class="grid-item"><input type="text" placeholder="RFC" /></div>
     <div class="grid-item"><input type="text" placeholder="Ciudad" /></div>
-    <div class="grid-item"><button>Continuar</button></div>
+    <div class="grid-item"><button :disabled="authStore.loading" @click="handleRegister">Registrar</button></div>
   </div>
 
   <div class="volver-container">
-    <a href="#" @click.prevent="volver">Volver</a>
+    <RouterLink to="/">Volver</RouterLink>
   </div>
 </template>
 
