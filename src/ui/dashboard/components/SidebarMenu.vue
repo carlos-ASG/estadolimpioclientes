@@ -39,7 +39,8 @@ const menuItems = [
   { icon: unidadesIcon, alt: "Unidades", text: "Unidades", route: "/dashboard/unidades" },
   { icon: zonasIcon, alt: "Zonas", text: "Zonas", route: "/dashboard/zonas" },
   { icon: personalIcon, alt: "Personal", text: "Personal", route: "/dashboard/personal" },
-  { icon: solicitarEspIcon, alt: "Especiales", text: "Especiales" },
+  { icon: solicitarEspIcon, alt: "Solicitar Especiales", text: "Padrones", route: "/dashboard/Padrones" },
+  { icon: unidadesIcon, alt: "Unidades", text: "Unidades", route: "/dashboard/unidades" },
   { icon: alertaIcon, alt: "Alertas", text: "Alertas", route: "/dashboard/alertas" },
   { icon: mapaIcon, alt: "Mapa", text: "Mapa", route: "/dashboard/mapa" },
   { icon: salir, alt: "Cerrar Sesión", text: "Salir" },
@@ -48,7 +49,7 @@ const menuItems = [
 
 <style scoped>
 .sidebar {
-  height: 100vh; /* Ajusta la altura al 100% de la pantalla */
+  height: 150vh; /* Ajusta la altura al 100% de la pantalla */
   width: 10%; /* Ajusta el ancho como porcentaje */
   background-color: #34a853;
   padding: 2% 1%; /* Ajusta el padding como porcentaje */

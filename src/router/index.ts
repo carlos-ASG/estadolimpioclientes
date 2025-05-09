@@ -32,6 +32,8 @@ const router = createRouter({
           {path: '', name: 'dashboardHome', component: () => import('@/ui/dashboard/components/DashBoardHomeView.vue')},
           {path: 'unidades', name: 'dashboard', component: () => import('@/ui/dashboard/components/UnidadesView.vue')},
           {path:'personal', name: 'personal', component: () => import('@/ui/dashboard/components/PersonalView.vue')},
+          { path: 'padrones', name: 'padrones', component: () => import('@/ui/dashboard/PadronesView.vue') }, // Nueva ruta
+
         ]
     }
   ],
