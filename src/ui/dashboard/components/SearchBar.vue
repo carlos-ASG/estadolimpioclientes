@@ -9,18 +9,18 @@
 </template>
 
 <script setup lang="ts">
-  // No se necesita lógica adicional por ahora
+
 </script>
 
 <style scoped>
 .navBar {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start; /* Asegura que los elementos estén alineados a la izquierda */
+  justify-content: flex-start;
   width: 100%;
-  height: 10vh; /* Convertido a altura proporcional de la ventana */
-  background-color: #ffffff; /* Color de fondo */
-  padding: 2% 1.2%;
+  height: 10vh;
+  background-color: #ffffff;
+  padding: 1%;
 }
 
 .search-bar {
@@ -28,14 +28,14 @@
   height: 20%;
   background: #f7f7f7;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 16px; /* Borde redondeado */
+  border-radius: 16px;
   outline: 1px rgba(0, 0, 0, 0.35) solid;
   outline-offset: -1px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.8% 1.2%;
-  margin: 0; /* Elimina el centrado automático */
+  margin: 0;
 }
 
 .search-bar input {
@@ -43,20 +43,20 @@
   border: none;
   outline: none;
   background: transparent;
-  font-size: 2vw; /* Mantén el tamaño del texto */
+  font-size: 2vw;
   font-family: Inter, sans-serif;
   color: #333;
 }
 
 .search-bar .search-icon {
-  width: 1.5vw; /* Mantén el tamaño del ícono */
-  height: auto; /* Mantén la proporción */
+  width: 1.5vw;
+  height: auto;
 }
 
 .navBar-image {
-  width: 23%; /* Igual al ancho de .search-bar */
-  height: auto; /* Mantén la proporción de la imagen */
-  border-radius: 8px; /* Añadir borde redondeado a la imagen */
-  margin-left: auto; /* Mueve la imagen hacia la derecha */
+  width: 23%;
+  height: auto;
+  border-radius: 8px;
+  margin-left: auto;
 }
 </style>
