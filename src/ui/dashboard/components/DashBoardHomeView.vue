@@ -2,6 +2,9 @@
 import MapCard from '@/ui/dashboard/components/MapCard.vue';
 import InfoCard from '@/ui/dashboard/components/InfoCard.vue'; // Importa el componente
 import StatsCard from '@/ui/landing/components/StatsCard.vue'; // Importa el componente
+import ZoneState from '@/ui/dashboard/components/ZoneState.vue';
+import UnitsInfo from '@/ui/dashboard/components/UnitsInfo.vue';
+
 import draggable from 'vuedraggable';
 import { ref} from 'vue';
 
@@ -51,12 +54,12 @@ const cards = ref([
 
     <!-- Módulo 3 -->
     <div class="main-grid-item module-3">
-      Módulo 3
+      <ZoneState />
     </div>
 
     <!-- Módulo 4 -->
     <div class="main-grid-item module-4">
-      Módulo 4
+      <UnitsInfo />
     </div>
   </div>
 </template>
@@ -87,25 +90,26 @@ p {
   box-sizing: border-box;
   margin: 0; /* Elimina cualquier margen */
   padding: 0; /* Elimina cualquier padding */
-  overflow: hidden; /* Evita el scroll */
+  max-width: 100vw; /* Asegura que no exceda el ancho de la pantalla */
+  overflow-x: hidden; /* Evita el scroll */
+  padding: .2rem;
 }
 
 /* Elementos del grid */
 .main-grid-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #FFFFFF; /* Fondo gris claro */
+  display: block; /* Elimina el flex para que el hijo use todo el espacio disponible */
+  background-color: #FFFFFF;
   border-radius: 10px;
-  text-align: center;
   font-size: 16px;
   font-weight: bold;
-  padding: 10px;
+  padding: 0.5rem;
   box-sizing: border-box;
-  width: 100%; /* Ajusta el ancho al tamaño de la celda */
-  height: 100%; /* Ajusta la altura al tamaño de la celda */
-  overflow: hidden; /* Evita que el contenido interno desborde */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
+
+
 
 /* Estilos específicos para cada área */
 .info {
@@ -122,19 +126,19 @@ p {
 .stats {
   grid-column: 2 / 3; /* Segunda columna */
   grid-row: 2 / 3; /* Segunda fila */
-  background-color: #ccffcc; /* Fondo verde claro */
+  background-color: #FFFFFF; /* Fondo blanco */
 }
 
 .module-3 {
   grid-column: 1 / 2; /* Ocupa la primera columna */
   grid-row: 3 / 4; /* Tercera fila */
-  background-color: #ccccff; /* Fondo azul claro */
+  background-color: #ffffff; /* Fondo blanco  */
 }
 
 .module-4 {
   grid-column: 2 / 3; /* Ocupa la segunda columna */
   grid-row: 3 / 4; /* Tercera fila */
-  background-color: #ffffcc; /* Fondo amarillo claro */
+  background-color: #ffffff; /* Fondo blanco */
 }
 
 /* Contenedor de las tarjetas InfoCard */
